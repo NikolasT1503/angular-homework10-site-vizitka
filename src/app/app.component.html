@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!--   <a class="navbar-brand" routerLink="main">Главная</a>
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon">Привет</span>
+  </button> -->
+
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav mr-auto">
+      <!--     <li class="nav-item active">
+     <a class="nav-link" routerLink="" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+    </li> -->
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="main" routerLinkActive="active">Главная</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="about" routerLinkActive="active">Обо мне</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="projects" routerLinkActive="active">Мои проекты</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['references']" routerLinkActive="active">Полезные ссылки</a>
+      </li>
+      <button class="btn btn-light" type="button" (click)="goBack()">
+        <-
+      </button>
+      &nbsp;
+      <button class="btn btn-light" type="button" (click)="goForward()">
+        ->
+      </button>
+      <!--     <li class="nav-item">
+      <a class="nav-link" routerLinkActive="active" (click)="goBack()"><span><</span></a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link"  routerLinkActive="active" (click)="goForward()"><span>></span></a>
+     </li> -->
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
