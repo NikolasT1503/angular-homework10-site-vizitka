@@ -107,19 +107,19 @@ export const PROJECTS: Project[] = [
         "readme": "https://github.com/NikolasT1503/angular-homework7-editForms/blob/main/README.md"
     },
     {
-        "lesson": "Dependency Injection",
-        "theme": "Dependency Injection",
+        "lesson": "Навигация по сайту",
+        "theme": "Меню и навигация",
         "note": "",
-        "href": "",
-        "readme": ""
-    },  
+        "href": "https://stackblitz.com/github/NikolasT1503/angular-homework10-site-vizitka",
+        "readme": "https://github.com/NikolasT1503/angular-homework10-site-vizitka/blob/main/README.md"
+    },
     {
-        "lesson": "Dependency Injection",
-        "theme": "Dependency Injection",
-        "note": "",
-        "href": "",
-        "readme": ""
-    },  
+        "lesson": "HTTP",
+        "theme": "HttpClient и интерцепторы",
+        "note": "а также mat table",
+        "href": "https://stackblitz.com/github/NikolasT1503/angular-hw11",
+        "readme": "https://github.com/NikolasT1503/angular-hw11/blob/main/README.md"
+    },    
 
 
 

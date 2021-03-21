@@ -1,1 +1,72 @@
-<p>projects works!</p>
+<table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8" style="width: 100%">
+    <ng-container matColumnDef="lesson">
+        <th mat-header-cell *matHeaderCellDef>Урок</th>
+        <td mat-cell *matCellDef="let element">
+            {{element.lesson}}
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="theme">
+        <th mat-header-cell *matHeaderCellDef>Тема</th>
+        <td mat-cell *matCellDef="let element">
+            {{element.theme}}
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="note">
+        <th mat-header-cell *matHeaderCellDef>Примечание</th>
+        <td mat-cell *matCellDef="let element">
+            {{element.note}}
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="href">
+        <th mat-header-cell *matHeaderCellDef>Ссылка на проект</th>
+        <td mat-cell *matCellDef="let element">
+            <a [href]="element.href" target="_blanc"><img width="20" height="20" src="../../assets/angular.png"></a>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="readme">
+        <th mat-header-cell *matHeaderCellDef>Ссылка на readme</th>
+        <td mat-cell *matCellDef="let element">
+            <a [href]="element.readme" target="_blanc"><img width="20" height="20" src="../../assets/github.png"></a>
+        </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+</table>
+
+<!-- #todo сделать группировку на основе раскрывающихся строк, на этмо примере
+
+<table mat-table
+       [dataSource]="dataSource" multiTemplateDataRows
+       class="mat-elevation-z8">
+  <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="expandedDetail">
+    <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+      <div class="example-element-detail"
+           [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+        <div class="example-element-diagram">
+          <div class="example-element-position"> {{element.position}} </div>
+          <div class="example-element-symbol"> {{element.symbol}} </div>
+          <div class="example-element-name"> {{element.name}} </div>
+          <div class="example-element-weight"> {{element.weight}} </div>
+        </div>
+        <div class="example-element-description">
+          {{element.description}}
+          <span class="example-element-description-attribution"> -- Wikipedia </span>
+        </div>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+      class="example-element-row"
+      [class.example-expanded-row]="expandedElement === element"
+      (click)="expandedElement = expandedElement === element ? null : element">
+  </tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+</table> -->

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { slideInAnimation } from './animation';
 import { NavigationEnd, NavigationStart, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
 import { Location } from "@angular/common"
 
 @Component({
